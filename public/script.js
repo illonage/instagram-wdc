@@ -3,7 +3,7 @@ var accessToken;
 var userPage;
 
  var config = {
-      appId: '2639168876413775',
+      appId: '1041600009599441',
       redirectUri: 'https://insta-wdc.herokuapp.com/redirect',
       authUrl: 'https://www.facebook.com/v8.0/dialog/oauth?'
   }; 
