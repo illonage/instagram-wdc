@@ -1,29 +1,27 @@
 {
-  "//1": "describes your app and its dependencies",
-  "//2": "https://docs.npmjs.com/files/package.json",
-  "//3": "updating this file will download and update your packages",
-  "name": "hello-express",
-  "version": "0.0.1",
-  "description": "A simple Node app built on Express, instantly up and running.",
-  "main": "server.js",
+  "name": "instagram-wdc",
+  "description": "Tableau web data connector for Instagram.",
+  "version": "2.0.0",
+  "engines": {
+    "node": "12.x"
+  },
   "scripts": {
     "start": "node server.js"
   },
+  "keywords": [
+    "tableau-wdc",
+    "instagram"
+  ],
   "dependencies": {
     "express": "^4.17.1",
     "cookie-parser": "^1.4.5",
     "request": "^2.88.2"
   },
-  "engines": {
-    "node": "12.x"
-  },
-  "repository": {
-    "url": "https://glitch.com/edit/#!/hello-express"
-  },
-  "license": "MIT",
-  "keywords": [
-    "node",
-    "glitch",
-    "express"
-  ]
+  "devDependencies": {
+    "grunt-express-server": "~0.5",
+    "grunt-contrib-watch": "~0.6",
+    "jsdom": "^3.1.2",
+    "mocha": "^2.2.5",
+    "sinon": "^1.16.1"
+  }
 }
