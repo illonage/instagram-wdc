@@ -9,7 +9,7 @@ var userPage;
   }; 
 
 $(document).ready(function() {
-  
+  $(".connectbutton").css('display', 'none');
   var accessToken = Cookies.get("accessToken");
   var hasAuth = accessToken && accessToken.length > 0;
   updateUIWithAuthState(hasAuth);
@@ -44,11 +44,9 @@ function doAuthRedirect() {
  function updateUIWithAuthState(hasAuth) {
       if (hasAuth) {
         $(".notsignedin").css('display', 'none');
-        $(".connectbutton").css('display', 'block');
         
       } else {
           $(".notsignedin").css('display', 'block');
-          $(".connectbutton").css('display', 'none');
       }
   }
 
@@ -67,14 +65,10 @@ function updateUIWithPage(pageToReturn){
       var label = document.createElement('label'); 
       label.htmlFor = pageToReturn[i].name; 
       label.appendChild(document.createTextNode(pageToReturn[0][i].name)); 
-      var space = 
       myDiv.appendChild(checkbox); 
       myDiv.appendChild(label); 
+      $(".connectbutton").css('display', 'block');
     }
-  }
-  else{
-    var textError = document.createTextNode("Sorry, you don't have any Facebook page connected to that account");
-    myDiv.appendChild(textError);
   }
 }
 
@@ -85,12 +79,19 @@ function getUserPage(accessToken){
     url: connectionUri,
     dataType: 'json',
           success: function (resp) {
-            console.log(resp.data);
               if (resp.data) {
                 var ii;
-                for (ii = 0; ii < resp.data.length; ++ii) {
-                  pageToReturn.push(resp.data);
-                  updateUIWithPage(pageToReturn);
+                if(resp.data.length > 0){
+                  for (ii = 0; ii < resp.data.length; ++ii) {
+                    pageToReturn.push(resp.data);
+                    updateUIWithPage(pageToReturn);
+                  }
+                }
+                else {
+                  var myDiv = document.getElementById("pages");
+                  var textError = document.createTextNode("Sorry, you don't have any Facebook page connected to that account");
+                  myDiv.appendChild(textError);
+                  $(".connectbutton").css('display', 'none');
                   
                 }
               }
@@ -104,7 +105,6 @@ function getUserPage(accessToken){
               tableau.abortForAuth("Invalid Access Token");
           }
   })
-  console.log(pageToReturn);
   return pageToReturn;
 }
 
