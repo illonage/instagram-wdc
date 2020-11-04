@@ -57,8 +57,7 @@ function updateUIWithPage(pageToReturn){
   var h = document.getElementById("h");
   var text = document.createTextNode("Select your Facebook Page:");
   h.appendChild(text); 
-  
-  h.appendChild(text); 
+  if(pageToReturn.length!== 0){
     for (var i = 0; i< pageToReturn.length; i++){
       var checkbox = document.createElement('input');
       checkbox.type = "checkbox"; 
@@ -72,6 +71,11 @@ function updateUIWithPage(pageToReturn){
       myDiv.appendChild(checkbox); 
       myDiv.appendChild(label); 
     }
+  }
+  else{
+    var textError = document.createTextNode("Sorry, you don't have any Facebook page connected to that account");
+    myDiv.appendChild(textError);
+  }
 }
 
 function getUserPage(accessToken){
