@@ -1,0 +1,29 @@
+{
+    "name": "Tableau Instagram Web Data Connector",
+    "description": "Connect to your Instagram data in Tabeau",
+    "keywords": [
+      "data",
+      "Instagram",
+      "Tableau"
+    ],
+    "logo": "https://raw.githubusercontent.com/illonage/instagram-wdc/master/logo.png",
+    "website": "https://github.com/illonage/instagram-wdc",
+    "repository": "https://github.com/illonage/instagram-wdc",
+    "env": {
+      "CLIENT_ID": {
+        "description": "Replace it with your app ID",
+        "value": "12341234",
+        "required": "true"
+      },
+      "REDIRECT_URI": {
+        "description": "Enter Your Redirect URL in the App Dashboard",
+        "value": "https://[your-app-name].herokuapp.com/redirect",
+        "required": "true"
+      },
+      "CLIENT_SECRET": {
+        "description": "Your unique app secret, shown on the App Dashboard. ",
+        "value": "12341234",
+        "required": "true"
+      }
+    }
+  }

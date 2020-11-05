@@ -13,9 +13,9 @@ app.use(express.static("public"));
 // -------------------------------------------------- //
 // Variables
 // -------------------------------------------------- //
-var clientID = process.env.clientID;
-var redirectURI = process.env.redirectURI;
-var clientSecret = process.env.clientSecret;
+var clientID = process.env.CLIENT_ID;
+var redirectURI = process.env.REDIRECT_URI;
+var clientSecret = process.env.CLIENT_SECRET;
 
 
 
