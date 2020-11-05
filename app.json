@@ -17,7 +17,7 @@
       },
       "REDIRECT_URI": {
         "description": "Enter Your Redirect URL in the App Dashboard",
-        "value": "https://[your-app-name].herokuapp.com/redirect",
+        "value": "your-app-name.herokuapp.com/redirect",
         "required": "true"
       },
       "CLIENT_SECRET": {
