@@ -1,30 +1,16 @@
-# hello-express
+# Instagram Web Data Connector
 
-A server that serves a webpage, its resources, and some data
+Get your Instagram data in Tableau. Once the connector deployed on Heroku, open it in Tableau to retrieve your Instagram data and start vizzing! Note: this app is neither affiliated with Instagram nor officially supported by Tableau.
 
+## Requirements
 
-## Your Project
+- An Instagram Business Account or Instagram Creator Account
+- A Facebook Page connected to that account
+- A Facebook Developer account that can perform Tasks on that Page
+- A registered Facebook App with Basic settings configured
 
-On the front-end,
+For more information, go to [developers.facebook.com](https://developers.facebook.com/)
 
-- Edit `views/index.html` to change the content of the webpage
-- `public/client.js` is the javacript that runs when you load the webpage
-- `public/style.css` is the styles for `views/index.html`
-- Drag in `assets`, like images or music, to add them to your project
+## Deploy to Heroku
 
-On the back-end,
-
-- your app starts at `server.js`
-- add frameworks and packages in `package.json`
-- safely store app secrets in `.env` (nobody can see this but you and people you invite)
-
-Click `Show` in the header to see your app live. Updates to your code will instantly deploy.
-
-
-## Made by [Glitch](https://glitch.com/)
-
-**Glitch** is the friendly community where you'll build the app of your dreams. Glitch lets you instantly create, remix, edit, and host an app, bot or site, and you can invite collaborators or helpers to simultaneously edit code with you.
-
-Find out more [about Glitch](https://glitch.com/about).
-
-( ᵔ ᴥ ᵔ )
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
