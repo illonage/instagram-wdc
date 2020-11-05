@@ -1,29 +1,42 @@
 {
-    "name": "Tableau Instagram Web Data Connector",
-    "description": "Connect to your Instagram data in Tabeau",
+    "name": "Tableau Slackhooks",
+    "description": "This app allows you to create Webhooks for your Slack Workspace",
     "keywords": [
-      "data",
-      "Instagram",
-      "Tableau"
+      "productivity",
+      "Slack",
+      "bot"
     ],
-    "logo": "https://raw.githubusercontent.com/illonage/instagram-wdc/main/logo.png",
-    "website": "https://github.com/illonage/instagram-wdc",
-    "repository": "https://github.com/illonage/instagram-wdc",
+    "logo": "https://raw.githubusercontent.com/illonage/hackathon-project-2020/master/webhooks.png",
+    "website": "https://github.com/illonage/hackathon-project-2020",
+    "repository": "https://github.com/illonage/hackathon-project-2020",
     "env": {
-      "CLIENT_ID": {
-        "description": "Replace it with your app ID",
-        "value": "12341234",
+      "SLACK_WEBHOOKS_URL": {
+        "description": "Your Slack Webhook URL",
+        "value": "1234-12314123123-123123123",
         "required": "true"
       },
-      "REDIRECT_URI": {
-        "description": "Enter Your Redirect URL in the App Dashboard",
-        "value": "your-app-name.herokuapp.com/redirect",
+      "TABLEAU_TOKEN": {
+        "description": "Your Tableau Personal Access Token",
+        "value": "1234-12314123123-123123123",
         "required": "true"
       },
-      "CLIENT_SECRET": {
-        "description": "Your unique app secret, shown on the App Dashboard. ",
-        "value": "12341234",
+      "TABLEAU_TOKEN_NAME": {
+        "description": "The name of your personal access token",
+        "value": "heroku",
         "required": "true"
+      },
+      "TABLEAU_EVENT_NAME": {
+        "description": "The Tableau Event Name",
+        "value": "workbook-created",
+        "required": "true"
+      },
+      "TABLEAU_SITE_NAME": {
+        "description": "The name of your Tableau Site",
+        "value": "betagigi",
+        "required": "true"
+      },
+      "HEROKU_APP_NAME": {
+        "required": true
       }
     }
   }
