@@ -25,5 +25,10 @@
         "value": "12341234",
         "required": "true"
       }
-    }
+    },
+    "buildpacks": [
+        {
+          "url": "heroku/nodejs"
+        }
+    ]
   }
