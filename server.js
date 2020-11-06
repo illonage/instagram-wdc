@@ -38,8 +38,7 @@ app.get("/redirect", function(req, res) {
       'client_id': clientID,
       'redirect_uri': redirectURI,
       'client_secret': clientSecret,
-      'code': authCode,
-      'scope': 'instagram_basic, pages_show_list'
+      'code': authCode
   };
   
   var token_request_header = {

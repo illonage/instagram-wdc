@@ -5,7 +5,8 @@ var userPage;
  var config = {
       appId: Cookies.get("clientID"),
       redirectUri: Cookies.get("redirect"),
-      authUrl: 'https://www.facebook.com/v8.0/dialog/oauth?'
+      authUrl: 'https://www.facebook.com/v8.0/dialog/oauth?',
+      scope: 'instagram_basic, pages_show_list'
   }; 
 
 $(document).ready(function() {
@@ -37,7 +38,7 @@ function doAuthRedirect() {
         appId = config.appId; // This should be the Tableau Server appID
       }
       var url = config.authUrl + 'client_id=' + appId +
-              '&redirect_uri=' + config.redirectUri;
+              '&redirect_uri=' + config.redirectUri + '&scope=' + config.scope;
       window.location.href = url;
   } 
 
