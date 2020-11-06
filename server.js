@@ -21,12 +21,15 @@ var clientSecret = process.env.CLIENT_SECRET;
 
 // https://expressjs.com/en/starter/basic-routing.html
 app.get("/", (request, response) => {
+  response.cookie('clientID', clientID, { });
+  response.cookie('redirect', redirectURI, { });
   console.log("got here");
   //response.redirect('views/index.html');
   response.sendFile(__dirname + "/views/index.html");
 });
 
 app.get("/redirect", function(req, res) {
+
   // get our authorization code
   authCode = req.query.code;
   console.log(authCode);

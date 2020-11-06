@@ -3,8 +3,8 @@ var accessToken;
 var userPage;
 
  var config = {
-      appId: process.env.CLIENT_ID,
-      redirectUri: process.env.REDIRECT_URI,
+      appId: Cookies.get("clientID"),
+      redirectUri: Cookies.get("redirect"),
       authUrl: 'https://www.facebook.com/v8.0/dialog/oauth?'
   }; 
 
