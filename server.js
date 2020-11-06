@@ -39,7 +39,7 @@ app.get("/redirect", function(req, res) {
       'redirect_uri': redirectURI,
       'client_secret': clientSecret,
       'code': authCode,
-      'scope': 'instagram_basic, pages_show_list, instagram_manage_insights, pages_read_engagement, pages_show_list, ads_management, business_management'
+      'scope': 'instagram_basic, pages_show_list'
   };
   
   var token_request_header = {
