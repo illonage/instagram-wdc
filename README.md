@@ -13,4 +13,4 @@ For more information, go to [developers.facebook.com](https://developers.faceboo
 
 ## Deploy to Heroku
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/illonage/instagram-wdc/tree/main)
